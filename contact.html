@@ -16,14 +16,8 @@
 <div id="main">
 <h1>Contact</h1>
 <p>Say hello to me.</p>
-  <form id="contact-form" method="post" action="">
-        <input name="name" type="text" class="form-control" placeholder="Your name" required>
-        <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
-        <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea><br>
-        
-        <input type="submit" class="form-control submit" value="Send">
-        
-    </form> 
+  <p>Twitter: @claysingarts, Discord: #3271, Instagram: claysingproductions, email</p>
+  <a href="mailto:wreckingjesse@gmail.com">Or send an email</a>
 </div>  
 </body>
 
@@ -73,65 +67,4 @@ display: block;
 li a:hover {
 background: #3fd2ff;
 }
-  
-  form {
-  margin-top: 50px;
-    transition: all 4s ease-in-out;
-  }
-  
-  .form-control {
-  width: 600px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #ff66ea;
-    color: #ff66ea;
-    font-size: 18;
-    margin-bottom: 16px;
-  }
-  
-  input {
-  height: 45px
-  }
-  
-  form .submit {
-  background: #ff66ea;
-    border-color: transparent;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 50px;
-    margin-top: 20px;
-  }
-  
-  form .submit:hover {
-  background-color: #f500d4;
-    cursor: pointer;
-  }
 </style>  
-
-<?php
-$name = $_POST['name'];
-$visitor_email = $_POST['email'];
-$message = $_POST['message'];
-
-$email_from = 'wreckingjesse@gmail.com';
-
-$email_subject = "New form submission from claysingproductions website";
-
-$email_body = "User Name: $name.\n".
-"User Email: $visitor_email.\n".
-"User Message: $message.\n";
-
-$to = "wreckingjesse@gmail.com";
-
-$headers = "From: $email_from \r\n";
-
-$headers .= "Reply-To: $visitor_email \r\n";
-
-mail($to,$email_subject,$email_body,$headers);
-
-header("Location: contact.html");
-
-?>
